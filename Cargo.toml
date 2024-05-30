@@ -1,0 +1,10 @@
+[package]
+name = "memos_remind"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lettre = "0.11.7"
+
+[dev-dependencies]
+lettre = "0.11.7"
