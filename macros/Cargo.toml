@@ -1,0 +1,26 @@
+[package]
+name = "macros"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+proc-macro2 = "1.0.84"
+quote = "1.0.36"
+serde = { version = "1.0.203", features = ["derive"] }
+serde_derive = "1.0.203"
+syn = { version = "2.0.66", features = ["full"] }
+time = "0.3.36"
+tokio = { version = "1.38.0", features = ["full"] }
+tokio-macros = "2.3.0"
+toml = "0.8.13"
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = [
+    "env-filter",
+    "local-time",
+] }
+
+[lib]
+proc-macro = true
+
+[dev-dependencies]
+serde = { version = "1.0.203", features = ["derive"] }
