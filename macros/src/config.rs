@@ -9,6 +9,7 @@ pub fn config(args: TokenStream, input: TokenStream) -> TokenStream {
     let derive_input = parse_macro_input!(input as DeriveInput);
     let struct_name = &derive_input.ident;
 
+    // 使用cargo expand --example demo查看展开后的代码,方便调试
     let gen = quote! {
         use tokio::{fs, sync::OnceCell};
         use std::{env, str::FromStr, sync::Arc};
