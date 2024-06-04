@@ -1,0 +1,6 @@
+note_paths = [""]
+email_from = "", // 发送邮件的邮箱
+email_to = "", // 接收邮件的邮箱
+smtp_server = "", // SMTP 服务器
+smtp_username = "", // SMTP 用户名
+smtp_password = "", // SMTP 密码

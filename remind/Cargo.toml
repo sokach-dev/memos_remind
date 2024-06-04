@@ -9,6 +9,7 @@ anyhow = "1.0.86"
 clap = { version = "4.5.4", features = ["derive"] }
 lettre = "0.11.7"
 macros = { version = "0.1.0", path = "../macros" }
+pulldown-cmark = "0.11.0"
 serde = { version = "1.0.203", features = ["derive"] }
 serde_derive = "1.0.203"
 tokio = { version = "1.38.0", features = ["full"] }
@@ -18,5 +19,3 @@ utils = { version = "0.1.0", path = "../utils" }
 validator = { version = "0.18.1", features = ["derive"] }
 walkdir = "2.5.0"
 
-[dev-dependencies]
-lettre = "0.11.7"
