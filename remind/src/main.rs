@@ -30,9 +30,9 @@ async fn main() -> Result<()> {
     utils::log::init_tracing();
     let cli = Cli::parse();
 
-    let c = config::get_global_config().await;
-
     env::set_var("REMIND_CONFIG", cli.config.clone());
+
+    let c = config::get_global_config().await;
 
     match cli.subcmd {
         Commands::Remind => {
