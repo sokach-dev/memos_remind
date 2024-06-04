@@ -1,5 +1,8 @@
 use anyhow::Result;
-use lettre::{transport::smtp::authentication::Credentials, Message, SmtpTransport, Transport};
+use lettre::{
+    message::header::ContentType, transport::smtp::authentication::Credentials, Message,
+    SmtpTransport, Transport,
+};
 
 pub fn send_email(
     from: &str,        // 发件邮箱
@@ -14,6 +17,7 @@ pub fn send_email(
         .from(from.parse()?)
         .to(to.parse()?)
         .subject(subject)
+        .header(ContentType::TEXT_HTML)
         .body(body)?;
 
     let creds = Credentials::new(smtp_username.to_string(), smtp_password.to_string());
